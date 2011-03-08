@@ -1,0 +1,10 @@
+%h1 Do It Idiot
+
+= current_user.email
+
+#todos_updating
+  &nbsp;
+#todo_wrapper
+  %ul#todo_sort
+    - @todos.each do |todo|
+      = render :partial => "li", :locals => {:todo => todo}

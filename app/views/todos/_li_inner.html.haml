@@ -1,0 +1,6 @@
+%span.ui-icon.ui-icon-arrowthick-2-n-s
+= todo.what_to_do
+%p{:style => "display: none;"}
+  = link_to("complete", "#", :class => "todo_complete", :id => "todo_complete_#{todo.id}")
+  = link_to("edit", "#", :class => "todo_edit", :id => "todo_edit_#{todo.id}")
+  = link_to("delete", "#", :class => "todo_delete", :id => "todo_delete_#{todo.id}")

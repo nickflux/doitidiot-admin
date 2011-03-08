@@ -1,0 +1,3 @@
+%form{:action => ""}
+  = text_field_tag :what_to_do, todo.what_to_do, :class => "what_to_do_input", :id => "what_to_do_#{todo.id}" 
+  = submit_tag("update", :id => "todo_update_#{todo.id}", :class => "todo_update")

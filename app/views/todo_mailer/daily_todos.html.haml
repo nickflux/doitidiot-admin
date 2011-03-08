@@ -1,0 +1,7 @@
+- if @todos.empty?
+  Nothing to do? Good for you, you lazy get.
+- else 
+  %ul#todo_sort
+    - @todos.each do |todo|
+      %li
+        = todo.what_to_do

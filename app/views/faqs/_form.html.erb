@@ -1,0 +1,14 @@
+<%= form_for @faq do |f| %>
+    <%= f.error_messages %> 
+    <%= f.label :question %>:
+    <%= f.text_field :question %><br />
+    <%= f.label :answer %>:
+    <%= f.text_area :answer %><br />
+    <%= f.label :faq_group %>:
+    <%= f.select :faq_group, ['about', 'technical'] %><br />
+    <%= f.label :ordinal %>:
+    <%= f.text_field :ordinal %><br />
+    <%= f.label :published %>:
+    <%= f.check_box :published %><br />
+    <%= f.submit %>
+  <% end %>

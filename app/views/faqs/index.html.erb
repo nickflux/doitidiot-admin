@@ -1,0 +1,31 @@
+<div class="span-22 prepend-1 append-1 main">
+	<h2>FAQs</h2>
+	<%= link_to("new faq", new_faq_path) %>
+	<table class="stripeMe">
+		<thead>
+			<tr>
+				<th>Question</th>
+				<th>Group</th>
+				<th>Published?</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		  <% @faqs.each do |faq| %>
+		  <tr>
+				<td><%= faq.question %></td>
+				<td><%= faq.faq_group %></td>
+				<td><%= if faq.published then "yes" else "no" end %></td>
+				<td><%= link_to("edit", edit_faq_path(faq)) %></td>
+				<td><%= button_to("delete", faq_path(faq), :confirm => "Are you sure?", :method => :delete) %></td>
+			</tr>
+        
+      <% end %>
+			
+		</tbody>
+	</table>
+
+  <div class="paging"><%= will_paginate(@faqs) %></div>
+
+</div>

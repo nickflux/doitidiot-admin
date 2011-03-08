@@ -1,0 +1,11 @@
+%h1 Do It Idiot
+
+= current_user.email
+
+%h2
+  completed to dos
+#todo_wrapper
+  %ul
+    - @completed_todos.each do |todo|
+      %li.ui-state-default{:id => "todo_#{todo.id}"}
+        = todo.what_to_do

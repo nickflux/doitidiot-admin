@@ -1,0 +1,24 @@
+<div class="span-22 prepend-1 append-1 main">
+	<h2>Users</h2>
+	<table class="stripeMe">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Started</th>
+			</tr>
+		</thead>
+		<tbody>
+		  <% @users.each do |user| %>
+		  <tr>
+				<td><%= user.email %></td>
+				<td><%= user.confirmed_at.strftime("%m/%d/%Y") %></td>
+			</tr>
+        
+      <% end %>
+			
+		</tbody>
+	</table>
+
+  <div class="paging"><%= will_paginate(@users) %></div>
+
+</div>

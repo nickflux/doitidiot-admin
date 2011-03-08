@@ -1,0 +1,5 @@
+- if @todos.empty?
+  Nothing to do? Good for you, you lazy get.
+- else
+  - @todos.each do |todo|
+    = todo.what_to_do
