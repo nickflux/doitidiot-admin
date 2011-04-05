@@ -238,5 +238,9 @@ input.field {
 /* @end */
 
 
+#redact_items {
+  list-style-type: none;
+  margin: 0;
+}
 
 
