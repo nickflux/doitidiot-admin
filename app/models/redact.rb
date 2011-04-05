@@ -19,3 +19,4 @@ class Redact
   end
 
 end
+
