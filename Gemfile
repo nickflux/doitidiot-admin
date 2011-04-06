@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.0.6'
 gem 'ruby-debug'
 gem 'nokogiri'
 gem 'mongoid', '2.0.0.rc.6'
 gem 'bson_ext', '~> 1.2'
-gem 'devise'
+gem 'devise', '1.1.5'
 gem 'haml'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'dynamic_form'
