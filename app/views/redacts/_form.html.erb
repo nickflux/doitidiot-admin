@@ -3,14 +3,6 @@
   <%= f.label :code_name %>:
   <%= f.text_field :code_name %><br />
   <%= f.label :redact_array %>:<br/>
-  <ul id="redact_items">
-    <% if !@redact.new_record? %>
-      <% @redact.redact_array.each do |redact_item| %>
-        <li><%= text_field_tag 'redact[redact_array][]', redact_item %></li>
-      <% end %>
-    <% end %>
-    <li><%= text_field_tag 'redact[redact_array][]' %></li>
-  </ul>
-  <a href="#" onclick="addRedactItem()">add redact item</a><br />
+  <%= text_area_tag 'redact[redact_array]', @redact.redact_array.join("\n") %><br/>
   <%= f.submit %>
 <% end %>
