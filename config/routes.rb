@@ -18,6 +18,7 @@ Doitidiot::Application.routes.draw do
   #   resources :products
   resources :faqs
   resources :redacts
+  resources :mail_messages
   
   # Sample resource route with options:
   #   resources :products do

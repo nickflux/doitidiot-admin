@@ -1,0 +1,10 @@
+<%= form_for @mail_message do |f| %>
+    <%= f.error_messages %> 
+    <%= f.label :date_to_send %>:
+    <%= f.date_select :date_to_send, :start_year => Time.now.year %><br />
+    <%= f.label :message %>:
+    <%= f.text_area :message %><br />
+    <%= f.label :message_no_html %>:
+    <%= f.text_area :message_no_html %><br />
+    <%= f.submit %>
+  <% end %>

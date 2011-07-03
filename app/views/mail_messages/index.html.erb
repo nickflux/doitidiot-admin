@@ -1,0 +1,29 @@
+<div class="span-22 prepend-1 append-1 main">
+	<h2>Mail Messages</h2>
+	<%= link_to("new mail message", new_mail_message_path) %>
+	<table class="stripeMe">
+		<thead>
+			<tr>
+				<th>Date to Send</th>
+				<th>Message</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		  <% @mail_messages.each do |mail_message| %>
+		  <tr>
+				<td><%= mail_message.date_to_send %></td>
+				<td><%= textilize(mail_message.message) %></td>
+				<td><%= link_to("edit", edit_mail_message_path(mail_message)) %></td>
+				<td><%= button_to("delete", mail_message_path(mail_message), :confirm => "Are you sure?", :method => :delete) %></td>
+			</tr>
+        
+      <% end %>
+			
+		</tbody>
+	</table>
+
+  <div class="paging"><%= will_paginate(@mail_messages) %></div>
+
+</div>

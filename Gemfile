@@ -9,6 +9,8 @@ gem 'devise', '1.1.5'
 gem 'haml'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'dynamic_form'
+gem 'RedCloth'
+gem 'SystemTimer'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

@@ -1,3 +1,5 @@
+- if @mail_message
+  = textilize(@mail_message.message).html_safe
 - if @todos.empty?
   Nothing to do? Good for you, you lazy get.
 - else 
