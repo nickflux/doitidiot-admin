@@ -11,7 +11,7 @@
 		  <% @users.each do |user| %>
 		  <tr>
 				<td><%= user.email %></td>
-				<td><%= user.confirmed_at.strftime("%m/%d/%Y") %></td>
+        <td><%= if user.confirmed_at then user.confirmed_at.strftime("%m/%d/%Y") end %></td>
 			</tr>
         
       <% end %>
