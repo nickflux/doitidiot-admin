@@ -1,0 +1,27 @@
+<h1>Redact</h1>
+
+<p>
+  <b> type</b><br>
+  <%= @redact._type %>
+</p>
+
+<p>
+  <b></b><br>
+  <%= @redact._id %>
+</p>
+
+<p>
+  <b>Code name</b><br>
+  <%= @redact.code_name %>
+</p>
+
+<p>
+  <b>Redact array</b><br>
+  <%= @redact.redact_array %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', redacts_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_redact_path(@redact), :class => 'btn' %>
+  <%= link_to 'Delete', redact_path(@redact), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

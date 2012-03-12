@@ -1,25 +1,22 @@
-<div class="span-22 prepend-1 append-1 main">
-	<h2>Redacts</h2>
-	<%= link_to("new redact", new_redact_path) %>
-	<table class="stripeMe">
-		<thead>
-			<tr>
-				<th>Code Name</th>
-				<th></th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-		  <% @redacts.each do |redact| %>
-		  <tr>
-				<td><%= redact.code_name %></td>
-				<td><%= link_to("edit", edit_redact_path(redact)) %></td>
-				<td><%= button_to("delete", redact_path(redact), :confirm => "Are you sure?", :method => :delete) %></td>
-			</tr>
-        
-      <% end %>
-			
-		</tbody>
-	</table>
+<h1>Redacts</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Code Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @redacts.each do |redact| %>
+      <tr>
+        <td><%= redact.code_name %></td>
+        <td>
+          <%= link_to 'Edit', edit_redact_path(redact), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', redact_path(redact), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-</div>
+<%= link_to 'New', new_redact_path, :class => 'btn btn-primary' %>
