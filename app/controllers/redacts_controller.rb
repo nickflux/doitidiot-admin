@@ -2,7 +2,7 @@ class RedactsController < ApplicationController
   
   # GET    /redacts(.:format)
   def index
-    @redacts = Redact.all.paginate(:page => params[:page], :per_page => 50)
+    @redacts = Redact.all
   end
   
   # GET    /redacts/:id(.:format)

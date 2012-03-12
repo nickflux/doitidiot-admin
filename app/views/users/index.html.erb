@@ -4,14 +4,18 @@
 		<thead>
 			<tr>
 				<th>Email</th>
-				<th>Started</th>
+				<th>Time Zone</th>
+				<th>Last logged in</th>
+				<th>Todos alive</th>
 			</tr>
 		</thead>
 		<tbody>
 		  <% @users.each do |user| %>
 		  <tr>
 				<td><%= user.email %></td>
-        <td><%= if user.confirmed_at then user.confirmed_at.strftime("%m/%d/%Y") end %></td>
+        <td><%= user.time_zone %></td>
+        <td><%= user.last_sign_in_at.strftime("%d %B %Y") if user.last_sign_in_at %></td>
+        <td><%= user.todos.alive.count %></td>
 			</tr>
         
       <% end %>
@@ -19,6 +23,6 @@
 		</tbody>
 	</table>
 
-  <div class="paging"><%= will_paginate(@users) %></div>
+  <div class="paging"><%= paginate(@users) %></div>
 
 </div>
