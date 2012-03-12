@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Do It Idiot</title>
+
+</head>
+
+<body>
+	
+	<!-- header -->
+	<div id="header">
+		<div class="container">
+			<div class="span-15 prepend-1">
+				<h1>Do It Idiot Admin</h1>
+			</div>
+			<div class="span-7 append-1 last welcome">
+			  <%= link_to("users", users_path) %> |
+			  <%= link_to("faqs", faqs_path) %> |
+			  <%= link_to("redacts", redacts_path) %> |
+			  <%= link_to("mail messages", mail_messages_path) %> |
+			  <%= link_to("view site", "http://www.doitidiot.com") %>
+			</div>
+		</div>
+	</div>
+	<!-- main -->
+	<div class="container">
+	  <%= yield %>
+	</div>
+	<!-- footer -->
+	<div class="container">
+		<div class="span-22 prepend-1 append-1 footer">
+			 <div id="#legals">
+				 Copyright 2011 Do It Idiot 
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
