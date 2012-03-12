@@ -18,8 +18,7 @@ DoitidiotApi::Application.configure do
   config.assets.compile = true
 
   # Generate digests for assets URLs
-  # set to false so caching manifest will work
-  config.assets.digest = false
+  config.assets.digest = true
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
