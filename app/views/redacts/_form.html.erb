@@ -10,6 +10,13 @@
     </div>
 
     <div class="control-group">
+      <%= f.label :sweary, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :sweary, :class => 'optionsCheckbox' %>
+      </div>
+    </div>
+
+    <div class="control-group">
       <%= f.label :redact_array, :class => 'control-label' %>
       <div class="controls">
         <%= text_area_tag 'redact[redact_array]', if @redact.new_record? then '' else @redact.redact_array.join("\n") end, :class => 'text_field' %>

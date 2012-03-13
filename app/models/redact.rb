@@ -3,6 +3,7 @@ class Redact
 
   field :code_name,     :type => String
   field :redact_array,  :type => Array
+  field :sweary,        :type => Boolean, :default => false
 
   validates_presence_of :code_name
   
@@ -15,9 +16,7 @@ class Redact
   end
 
   def redact_array=(redact_array_val)
-    redact_array_temp  = redact_array_val.split("\r\n")
-    Rails.logger.debug redact_array_temp.inspect
-    #Rails.logger.debug redact_array_temp.delete_if{|r| r == ''|| r == '\n' || r == '\r'}
+    redact_array_temp   = redact_array_val.split("\r\n")
     self[:redact_array] = redact_array_temp.delete_if{|r| r == ''}
   end
 

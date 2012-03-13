@@ -3,6 +3,7 @@
   <thead>
     <tr>
       <th>Code Name</th>
+      <th>Sweary?</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -10,6 +11,7 @@
     <% @redacts.each do |redact| %>
       <tr>
         <td><%= redact.code_name %></td>
+        <td><%= if redact.sweary then 'yes' end %></td>
         <td>
           <%= link_to 'Edit', edit_redact_path(redact), :class => 'btn btn-mini' %>
           <%= link_to 'Destroy', redact_path(redact), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
