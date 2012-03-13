@@ -39,7 +39,7 @@ class User
     TIMES_TO_SEND[time_to_send]
   end
   
-  def user_id
+  def user_identifier
     if provider == 'twitter'
       "@#{provider_name}"
     else
