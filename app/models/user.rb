@@ -13,6 +13,11 @@ class User
   field :address,       :type => String
   field :time_zone,     :type => String
   field :time_to_send,  :type => String
+  field :provider,      :type => String
+  field :provider_name, :type => String
+  field :uid,           :type => String
+  field :token,         :type => String
+  field :secret,        :type => String
 
   has_many :todos, :dependent => :destroy
 
@@ -32,6 +37,14 @@ class User
   
   def time_to_send_to_i
     TIMES_TO_SEND[time_to_send]
+  end
+  
+  def user_id
+    if provider == 'twitter'
+      "@#{provider_name}"
+    else
+      email
+    end
   end
 
 end
